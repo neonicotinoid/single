@@ -1,0 +1,22 @@
+{
+  "name": "basictemplate",
+  "description": "Start Template",
+  "main": "index.html",
+  "authors": [
+    "Neonicotinoid <skyyyr@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.0"
+  }
+}
