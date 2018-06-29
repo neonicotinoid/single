@@ -23,7 +23,7 @@ body {
 .home-section {
   height: 800px;
   padding-top: 70px;
-  background-image: url('/img/Layer\ 1.png');
+  background-image: url('../img/bg.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -33,9 +33,10 @@ body {
 .logo {
   width: 273px;
   height: 273px;
+  max-width: 100%;
   border-radius: 50%;
   background-color: #000;
-  background-image: url('/img/logo.svg');
+  background-image: url('../img/logo.svg');
   background-size: 170px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -100,7 +101,7 @@ body {
 .send {
   display: block;
   margin: 25px auto 0 auto;
-  padding: 10px 38px;
+  padding: 8px 38px;
   background-color: rgb(34, 125, 211);
   font-size: 26px;
   text-transform: uppercase;
@@ -276,6 +277,8 @@ body {
 
 .map-section {
   position: relative;
+  height: 600px;
+  background: #fff;
 }
 
 .contact-form-wrapper {
@@ -286,10 +289,14 @@ body {
   padding: 50px;
   border-radius: 50%;
   top: 100px;
-  left: calc(50% - 265px);
+  left: calc(50% - 215px);
   background-color: rgba(255, 255, 255, 0.85);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 999;
 }
 
 .contact-form {
@@ -298,6 +305,7 @@ body {
   flex-direction: column;
   width: 275px;
   max-width: 100%;
+  margin-top: 30px;
   &__name,
   &__email {
     display: block;
@@ -308,6 +316,7 @@ body {
     box-shadow: inset 0px 1px 0 0 rgba(0, 0, 0, 0.09);
     background-color: rgb(255, 255, 255);
     border: solid 1px rgb(229, 229, 229);
+    transition: .2s all;
     &:focus {
       border: solid 1px rgb(34, 125, 211);
     }
@@ -326,6 +335,7 @@ body {
     box-shadow: inset 0px 1px 0 0 rgba(0, 0, 0, 0.09);
     background-color: rgb(255, 255, 255);
     border: solid 1px rgb(229, 229, 229);
+    transition: .2s all;  
     &:focus {
       border: solid 1px rgb(34, 125, 211);
     }
@@ -341,6 +351,7 @@ body {
     background-size: cover;
     cursor: pointer;
     transition: all .2s;
+
     svg {
       fill: #44a36f;
       transition: all .2s;
@@ -368,6 +379,13 @@ body {
 
 
 @media screen and (max-width : 768px) {
+  .img-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .send-form {
+    width: auto;
+  }
   .download-content {
     flex-direction: column;
     align-items: center;
@@ -389,6 +407,10 @@ body {
   .feature {
     margin-top: 50px;
   }
+  .map-section {
+    height: auto;
+  }
+
   .contact-form-wrapper {
     display: block;
     position: relative;
@@ -396,11 +418,13 @@ body {
     left: auto;
     height: auto;
     margin: 30px auto;
+    width: auto;
     border-radius: 0;
     background-color: transparent;
     padding: 30px 0;
     text-align: center;
     box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.28);
+    background: #fff;
   }
   .contact-form {
     margin: 0 auto;
