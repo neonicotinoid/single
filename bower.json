@@ -16,7 +16,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "bootstrap": "^4.1.0"
+  "devDependencies": {
+    "normalize-css": "^8.0.0"
   }
 }
